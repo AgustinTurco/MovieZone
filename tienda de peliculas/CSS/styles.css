@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Mulish:wght@300&family=Playfair+Display&family=Ubuntu:wght@700&display=swap');
+
+*{
+    margin: 0;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+body{
+    color: #fff;
+    background-color: #212121;
+    padding: 1.5rem;
+}
+
+.buscar-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    align-items: center;
+    margin: 15px 0 30px 0;
+}
+.buscar-box form{
+    display: flex;
+    max-width: 400px;
+}
+.buscar-box input{
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    border-radius: 0.4rem 0 0 0.4rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.buscar-box .buscar-boton{
+    width: 120px;
+    background-color: #01579b;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0 0.4rem 0.4rem 0;
+    transition: all 0.5s ease;
+}
+.buscar-box .buscar-boton:hover{
+    background-color: #0091ea;
+    border: 1px solid #fff;  
+}
+.buscar-pelis{
+    text-align: center;
+}
+/*slider*/
+#team_box{
+    width: 100%;
+    padding-bottom: 30px;
+    scroll-behavior: smooth;
+  }
+  .slider{
+    position: relative;
+    background-color: #00000000;
+    width: 75%;
+    min-height: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+    z-index: 900;
+    border-radius: 20px;
+  }
+  
+  .slider .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 0 50%);
+    display: flex;
+  }
+  
+  .img-abogado{
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .slider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+  }
+  
+  .slider .slide img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slider .slide .info{
+    color: #222;
+    width: 50%;
+    padding: 25px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .slider .slide .info h2{
+    font-size: 2em;
+    color: #152744;
+  }
+  
+  .slider .slide .info p{
+    font-size: 1em;
+    color: black;
+    font-family: 'Outfit';
+    line-height: 21px;
+    font-weight: 400;
+    text-align: justify;
+  }
+  
+  .navigation{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .slider:hover .navigation{
+    opacity: 1;
+  }
+  
+  .prev-btn, .next-btn{
+    z-index: 999;
+    font-size: 2em;
+    color: #222;
+    background: rgba(255, 255, 255, 0.397);
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'REM';
+    font-size: 1.5rem;
+    box-shadow: 0 0 2px black;
+  }
+  
+  .prev-btn{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  
+  .next-btn{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  
+  .navigation-visibility{
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navigation-visibility .slide-icon{
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.5);
+    width: 20px;
+    height: 10px;
+    transform: translateY(-50px);
+    margin: 0 6px;
+    border-radius: 2px;
+    box-shadow: 0 0 3px black;
+    display: none;
+  }
+  
+  .navigation-visibility .slide-icon.active{
+    background-color: #367591;
+  }
+  
+  @media (max-width: 900px){
+    .slider{
+      width: 100%;
+    }
+  
+    .slider .slide .info{
+      position: relative;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width: 500px){
+    .slider .slide .info h2{
+      font-size: 1.8em;
+      line-height: 40px;
+    }
+  
+    .slider .slide .info p{
+      font-size: 0.9em;
+    }
+  }
+  
+  @media (max-width: 550px){  
+  
+    #team_box-team-title{
+      padding-bottom: 30px;
+      font-size: 4.5rem;
+    }
+    #team_box{
+      padding-bottom: 0;
+    }
+  
+    .slider{
+      height: 100%;
+      margin: 0px;
+  
+    }
+  
+    .slider .slide{
+      flex-direction: column;
+    }
+  
+    .img-abogado{
+      background-position: center;
+      height: 35%;
+      width: 100%;
+    }
+  
+    .slider .slide.active{
+      
+    }
+  
+    .slider .slide img{
+      
+    }
+  
+    .slider .slide .info{
+      height:65%;
+      width: 100%;
+    }
+  
+    .slider .slide .info h2{
+      
+    }
+  
+    .slider .slide .info p{
+      
+    }
+  
+    .navigation{
+      
+    }
+  
+    .slider:hover .navigation{
+      
+    }
+  
+    .prev-btn, .next-btn{
+      
+    }
+  
+    .prev-btn{
+      
+    }
+  
+    .next-btn{
+      
+    }
+  
+    .navigation-visibility{
+    }
+  
+    .navigation-visibility .slide-icon{
+      
+    }
+  
+    .navigation-visibility .slide-icon.active{
+      
+    }
+  }
+/* Oculta el elemento de resultados inicialmente */
+.oculto {
+  display: none;
+}
+
+.card{
+  margin-left: 20px;
+  width: 350px;
+  border-radius: 10px;
+}
+.card-img{
+  padding: 20px;
+  width: 350px;
+  border-radius: 40px;
+}
+.card-img2{
+  padding: 20px;
+  width: 325px;
+  border-radius: 40px;
+}
+.card h2{
+  text-align: center;
+}
+.lista-peliculas{
+  display: flex;
+}
+.card-btn {
+  display: flex;
+  background-color: #212121;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 130px;
+}
+.card-btn:hover{
+  box-shadow: 0px 0px 6px #fff;
+}
+
+
+  
+  
